@@ -2,6 +2,8 @@
 
  void main() {
 
+        float value = 2.1f;
+        printf("%f", value);
 
-    printf( "65 의 ASCII 값은 %c입니다.", 65);
+
      }

@@ -2,8 +2,8 @@
 
  void main() {
 
-        float value = 2.1f;
-        printf("%f", value);
+        int data = 7;
 
+        printf("[%5d] [%05d] [%-5d]",data, data, data);
 
      }

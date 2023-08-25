@@ -2,6 +2,7 @@
 
  void main() {
 
-      double data = 3.141592;
-            printf("[%f] [%.4f] [%8.4f] [%-8.4f",data,data,data,data);
+      int data1, data2;
+      data1 = 5 , data2 =data1 ;
+     printf("data 1 = %d , data2 = %d \n",data1, data2);
      }

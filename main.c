@@ -1,15 +1,14 @@
 #include <stdio.h>
 
+
+ void showMultiplication(){
+    int i;
+    for(i =1; i<=9;i++){
+        printf("2 * %d = %d\n",i, i*2);
+    }
+}
+
  int main() {
 
-    int sum =0, num= 1;
-    while(num<=5){
-        printf("num(%d) + sum (%d) = ",num,sum);
-        sum = sum + num;
-        printf("%d\n"gi,sum);
-        num++;
-    }
-
-    printf("Result : num = %d sum =%d \n",num,sum);
-    return 0;
- }
+    showMultiplication();
+}

@@ -9,6 +9,8 @@
 }
 
  int main() {
-
-    showMultiplication(5);
+for (int i=2;i<=9;i++) {
+    showMultiplication(i);
+    printf("===================\n");
+    }
 }

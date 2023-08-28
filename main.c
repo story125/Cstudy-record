@@ -1,15 +1,15 @@
 #include <stdio.h>
+ int Sum(int data1, int data2){
+    int result = data1 + data2;
+    return result;
 
- void main() {
 
+}
+ int main() {
+    int result;
+    result = Sum(5,3);
 
-    unsigned char A = 0x1A;
-    char B = 0x1A;
-
-\
-    A = A|0xFF;         // unsigned 형이라 그대로 계산
-    B = B|0xFF;         // signed라 부호가 있어 2의 보수로 전환 후 계산
-    printf("%d %d",A,B);
+    printf("5 + 3 = %d\n",result);
 
 
 

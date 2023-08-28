@@ -1,16 +1,13 @@
 #include <stdio.h>
 
 
- void showMultiplication(int step){
-    int i;
-    for(i =1; i<=9;i++){
-        printf("%d * %d = %d\n",step,i, i*step);
-    }
-}
+ void main() {
 
- int main() {
-for (int i=2;i<=9;i++) {
-    showMultiplication(i);
-    printf("===================\n");
+    int m;
+    for(m=5; m<8;m++){
+        if(m==6)continue;
+        printf("%m(%d)\n",m);
     }
+
+
 }

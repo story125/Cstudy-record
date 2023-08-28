@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 
- void showMultiplication(){
+ void showMultiplication(int step){
     int i;
     for(i =1; i<=9;i++){
-        printf("2 * %d = %d\n",i, i*2);
+        printf("%d * %d = %d\n",step,i, i*step);
     }
 }
 
  int main() {
 
-    showMultiplication();
+    showMultiplication(5);
 }

@@ -4,13 +4,17 @@
  int main() {
 
 
-    char data[] = "abc";    //"abc" 문자열을 저장
-    char result[16];        // 새로운 문자열을 저장할 변수
+    char data[] = {0,0,2,0,1,1,0,0,2,1,0,2};
+    int i,x,y;
 
-    strcpy(result, data);
-    strcat(result,"def");
-     printf("%s + \"def\" = %s \n",data, result);
-
+    for (i=0;i<12;i++){
+        x = i %4 +1;
+        y = i /4 +1;
+        printf("%d행 %d열에",x,y);
+        if(data[i] == 1) printf(" 검은 돌이 놓여 있습니다. \n");
+        else if(data[i] == 2) printf(" 흰 돌이 놓여 있습니다. \n");
+        else printf("돌 x \n");
+    }
      return 0 ;
 }
 

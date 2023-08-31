@@ -1,13 +1,18 @@
 #include <stdio.h>
 
+ void swap(int *pa , int *pb){
+    int temp =*pa;
+    *pa = *pb;
+    *pb= temp;
+
+}
  int main() {
-
-    short birthday;
-    short *ptr;
-    ptr = &birthday;
-
-    // %p 형식은 메모리 주소를 16진수 형식으로 출력함
-     printf("birthday의 변수의 주소는 %p입니다\n",ptr);
+    int start = 96, end =5;
+     printf("before : start = %d, end = %d\n",start,end);
+     if(start>end){
+         swap(&start,&end);
+     }
+     printf("after : start = %d, end = %d",start,end);
 
      return 0 ;
 }

@@ -1,20 +1,14 @@
 #include <stdio.h>
-#include <string.h>
 
  int main() {
 
+    short birthday;
+    short *ptr;
+    ptr = &birthday;
 
-    char data[] = {0,0,2,0,1,1,0,0,2,1,0,2};
-    int i,x,y;
+    // %p 형식은 메모리 주소를 16진수 형식으로 출력함
+     printf("birthday의 변수의 주소는 %p입니다\n",ptr);
 
-    for (i=0;i<12;i++){
-        x = i %4 +1;
-        y = i /4 +1;
-        printf("%d행 %d열에",x,y);
-        if(data[i] == 1) printf(" 검은 돌이 놓여 있습니다. \n");
-        else if(data[i] == 2) printf(" 흰 돌이 놓여 있습니다. \n");
-        else printf("돌 x \n");
-    }
      return 0 ;
 }
 

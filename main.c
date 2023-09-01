@@ -4,14 +4,10 @@
 
  int main() {
 
-    int input_data;
-    // 표준 입력 함수를 사용하여 입력값을 하나만 받음
-    input_data = getchar();
-    rewind(stdin);      // 표준 입력 버퍼에 있는 모든 값을 제거함
-     printf("input : %c\n",input_data);
-     input_data = getchar();
-     rewind(stdin);     // 똑같이 버퍼에 있는 모든 값을 제거함
-     printf("Second input : %c\n",input_data);
+   //문자열은 마지막에 NULL 문자 0을 포함해야 하므로 최대 9개의 문자까지 저장가능함
+   char input_string[10];
+     gets(input_string); // 문자열을 입력 받아 input_string에 저장함
+     printf("input : %s\n",input_string);
 
      return 0 ;
 }

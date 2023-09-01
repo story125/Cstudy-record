@@ -1,18 +1,30 @@
 #include <stdio.h>
 
+ int GetString(char buffer[], int limit){
+    int i;
+    for(i= 0; i<limit;i++){
+        buffer[i] = getchar();
+        if(buffer[i] == '\n'){
+            buffer[i] = 0;
+            return 1;
+        }
+
+    }
+    buffer[i] =0 ;
+     rewind(stdin);
+     return 0;
+}
 
 
  int main() {
+    int n = 10;
 
-
-    char input_string[10];
-    // 반환값이 NULL이 아니라면 문자열을 입력 받아서 input_string에 저장함
-    if(NULL != gets(input_string)){
-        printf("input :%s\n",input_string);
-    }
-    else{
-        printf("input -> Cancled\n");
-    }
+    char temp[n];
+    int state;
+    // 사용자에게 최대 n개까지만 입력 받겠다고 제한
+    state = GetString(temp, n-1);
+    if(state == 1)printf("input : %s\n",temp);              // 정상 입력
+    else printf("input : %s -> out of range \n",temp);      // 범위를 초과함
      return 0 ;
 }
 

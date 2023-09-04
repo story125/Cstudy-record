@@ -1,31 +1,40 @@
 #include <stdio.h>
 
- int GetString(char buffer[], int limit){
-    int i;
-    for(i= 0; i<limit;i++){
-        buffer[i] = getchar();
-        if(buffer[i] == '\n'){
-            buffer[i] = 0;
-            return 1;
-        }
 
+ int ArrayToInteger(char string[]){
+
+    int count = 0, num =0;
+    //문자열이 끝날 때 까지 반복
+    while(string[count] != 0){
+        // 반복할 때마다 이전 값에 10을 곱해서 자릿수를 증가시킴
+        num = num * 10 + string[count] - '0' ;
+        count++;
     }
-    buffer[i] =0 ;
-     rewind(stdin);
-     return 0;
+    return num;
+
 }
 
 
- int main() {
-    int n = 10;
 
-    char temp[n];
-    int state;
-    // 사용자에게 최대 n개까지만 입력 받겠다고 제한
-    state = GetString(temp, n-1);
-    if(state == 1)printf("input : %s\n",temp);              // 정상 입력
-    else printf("input : %s -> out of range \n",temp);      // 범위를 초과함
-     return 0 ;
+ int main() {
+
+    int first_num, second_num;
+    char first_string[16], second_string[16];
+
+     printf("input first number : ");
+     gets(first_string);    // 첫 번쨰 문자열 입력
+     printf("input second number : ");
+     gets(second_string);    // 두 번째 문자열 입력
+
+     first_num = ArrayToInteger(first_string);  // 문자열 -> 정수로 변환
+     second_num = ArrayToInteger(second_string);
+
+     printf("%d + %d = %d\n",first_num, second_num, first_num+ second_num);qq
+
+
+
+
+    return 0;
 }
 
 

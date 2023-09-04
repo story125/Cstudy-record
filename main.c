@@ -1,24 +1,17 @@
 #include <stdio.h>
  int main() {
 
-    int num = 0;
-    // 정상적인 나이를 입력할 떄까지 반복하기 위해 무한 반복을 사용함
+    char data[5] = {1,2,3,4,5};
+    int result = 0, i;
+    char *p =data;
 
-    while(1){
-
-        printf("input age: ");
-        scanf("%d", &num);
-
-        if(num > 0 && num <=130){
-            break;
-        }
-        else{
-            printf("Incorrect Age \n");
-
-        }
+    // 5번 반복하면서  포인터 변수 p를 사용하여 배열의 각 요소를 result 변수에 합산
+    for(i =0; i<5;i++){
+        result = result + *p;
+        p++;
     }
 
-     printf( " your age : %d \n",num);
+     printf("data 배열의 각 요소의 합은 %d \n",result);
 
     return 0;
 }
